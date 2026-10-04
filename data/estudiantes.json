@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "nombre": "Carlos Alberto",
+    "apellido": "Vera",
+    "email": "carlos@escuela.edu",
+    "carnet": "EST001",
+    "notas": {
+      "Estructuras De Datos": [
+        18
+      ],
+      "Programación": [
+        20
+      ]
+    },
+    "materias": [
+      "Estructuras De Datos",
+      "Programación"
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "joshue",
+    "apellido": "zambrano",
+    "email": "jzambranoq7@unemi.edu.ec",
+    "carnet": "1316055290",
+    "notas": {
+      "Estructura De Datos": [
+        10.0
+      ],
+      "Estructuras De Datos": [
+        15.0
+      ]
+    },
+    "materias": [
+      "Estructura De Datos",
+      "Estructuras De Datos"
+    ]
+  }
+]
