@@ -31,7 +31,7 @@ def siguiente_id():
     return max(ids) + 1 if ids else 1
 
 
-# ===================== C · CREATE =====================
+#C
 
 def crear_estudiante(datos):
     try:
@@ -64,7 +64,7 @@ def crear_estudiante(datos):
         return False, f"Error inesperado: {error}"
 
 
-# ===================== R · READ =====================
+#R
 
 def obtener_todos():
     return [Estudiante.desde_diccionario(reg) for reg in gestor.leer()]
@@ -77,7 +77,7 @@ def obtener_por_id(id_estudiante):
     return None
 
 
-# ===================== S · SEARCH =====================
+#S
 
 def buscar_estudiantes(termino):
     termino = termino.strip().lower()
@@ -93,7 +93,7 @@ def buscar_estudiantes(termino):
     return encontrados
 
 
-# ===================== U · UPDATE =====================
+#U
 
 def actualizar_estudiante(id_estudiante, cambios):
     try:
@@ -133,7 +133,7 @@ def actualizar_estudiante(id_estudiante, cambios):
         return False, f"Error inesperado: {error}"
 
 
-# ===================== D · DELETE =====================
+#D
 
 def eliminar_estudiante(id_estudiante):
     registros = gestor.leer()
@@ -146,7 +146,7 @@ def eliminar_estudiante(id_estudiante):
     return True, f"Estudiante {id_estudiante} eliminado"
 
 
-# ===================== MÉTODOS REQUERIDOS POR LA TAREA =====================
+
 
 def agregar_nota_estudiante(id_estudiante, materia, nota):
     """Agrega una nota (0 a 20) al estudiante indicado."""

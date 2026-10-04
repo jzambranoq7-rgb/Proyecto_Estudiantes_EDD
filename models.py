@@ -12,9 +12,9 @@ class Estudiante:
         self.apellido = apellido
         self.email = email
         self.carnet = carnet
-        # DICCIONARIO DE LISTAS: {"Matemática": [18, 19], "Inglés": [17]}
+        
         self.notas = notas if notas else {}
-        # CONJUNTO (set): materias en las que está inscrito, sin repetidos
+        
         self.materias = set(materias) if materias else set()
 
     def obtener_nombre_completo(self):
@@ -38,7 +38,6 @@ class Estudiante:
         return round(sum(todas) / len(todas), 2)
 
     def materias_en_comun(self, otro_estudiante):
-        # INTERSECCIÓN DE CONJUNTOS
         return self.materias & otro_estudiante.materias
 
     def a_diccionario(self):
@@ -49,7 +48,6 @@ class Estudiante:
             "email": self.email,
             "carnet": self.carnet,
             "notas": self.notas,
-            # JSON no admite 'set', se convierte a lista ordenada
             "materias": sorted(self.materias),
         }
 
@@ -62,7 +60,6 @@ class Estudiante:
             datos["email"],
             datos["carnet"],
             notas=datos.get("notas", {}),
-            # Al leer del JSON se reconstruye como conjunto (set)
             materias=set(datos.get("materias", [])),
         )
 
